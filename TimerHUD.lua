@@ -33,10 +33,10 @@ timeText.TextColor3 = Color3.new(1, 1, 1)
 timeText.FontFace = Font.new("rbxasset://fonts/families/Sarpanch.json")
 timeText.TextSize = 25
 
-local timeLabel = game.Workspace.Train.TrainControls.TimeDial.SurfaceGui.TextLabel
+local timeLabel = game.ReplicatedStorage.TimeHour
 
 local function updateTime()
-    timeText.Text = timeLabel.Text
+    timeText.Text = timeLabel.Value
 end
 
 game:GetService("RunService").Heartbeat:Connect(function()
